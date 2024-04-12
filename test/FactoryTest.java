@@ -20,4 +20,11 @@ public class FactoryTest {
         Assertions.assertTrue(obj2 instanceof Camion);
     }
 
+    @Test
+    @DisplayName("Nulo")
+    public void comprobarNulo(){
+        ITransporte result = Factory.getTransporte(999);
+        Assertions.assertNull(result);
+    }
+
 }
